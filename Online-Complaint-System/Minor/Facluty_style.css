@@ -1,0 +1,27 @@
+body {
+    background-image: linear-gradient(to bottom right,skyblue, white,skyblue);
+    width: 100%;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.F_page h1 {
+    color: rgb(44, 29, 158);
+    text-align: center;
+    font-size: 60px;
+    display: block;
+    background-color: rgb(127, 217, 255);
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.inform img {
+    height: 200px;
+    border-style: ridge;
+    border-color: blue;
+}
+.inform table{
+    width: 100%;
+    text-align: center;
+}

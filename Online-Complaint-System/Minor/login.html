@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: rgb(183, 178, 216);
+        }
+        .log form{
+            background-color: black;
+        }
+
+        fieldset {
+            border-style: dashed;
+            border-top-color: rgb(137, 137, 255);
+            border-left-color: rgb(77, 119, 255);
+            border-bottom-color: rgb(55, 55, 245);
+            border-right-color: rgb(65, 95, 243);
+            border-radius: 100pc;
+        }
+
+        .log fieldset {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .log legend {
+            font-size: 50px;
+            font-style: italic;
+            color: green;
+        }
+
+        .log fieldset .fg label {
+            font-size: 25px;
+            margin-left: 350px;
+        }
+
+        .log fieldset label {
+            font-size: 50px;
+        }
+
+        .log fieldset input {
+            font-size: 30px;
+        }
+
+        .log fieldset .log_but input {
+            height: 50px;
+            width: 530px;
+            border-color: rgb(50, 50, 250);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<title>Log In</title>
+
+<body>
+    <div class="log">
+        <form>
+            <fieldset>
+                <legend>Log In</legend>
+                <label>User Name</label>
+                <br>
+
+                <input type="text" name="u_name" placeholder="Enter User Name" size="30" style="height: 2pc;" required>
+                <br>
+
+                <label>Password</label>
+                <br>
+
+                <input type="password" name="password" placeholder="Enter Password" size="30" style="height: 2pc;"
+                    required>
+
+                <br>
+
+                <div class="fg">
+                    <label>Forgot <a href="">Password?</a></label>
+                </div>
+                <br>
+
+                <div class="log_but">
+                    <input type="button" name="button" value="Submit" required>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

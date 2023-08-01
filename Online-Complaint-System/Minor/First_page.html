@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 98%;
+            height: 40pc;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+            display: block;
+            background-size: cover;
+            position: absolute;
+            background-image: url('sistec.jpg');
+            animation: slideshow 15s infinite linear;
+        }
+
+        @keyframes slideshow {
+            0% {
+                background-image: url("sistec.jpg");
+            }
+
+            25% {
+                background-image: url("sistec2.jpg");
+            }
+
+            50% {
+                background-image: url("sistec3.jpg");
+            }
+
+            75% {
+                background-image: url("sistec4.jpg");
+            }
+        }
+
+        .log form {
+            background-image: linear-gradient(skyblue, white, skyblue);
+            font-style: italic;
+            text-align: center;
+            font-size: 40px;
+            margin-top: 10%;
+            margin-left: 25%;
+            max-width: 700px;
+            border-radius: 5pc;
+        }
+
+        .log input {
+            font-size: 30px;
+            background-color: rgb(145, 198, 236);
+        }
+
+        .log_but input {
+            cursor: pointer;
+        }
+
+        .log_but input:hover {
+            font-size: 35px;
+        }
+
+        .fg label {
+            font-size: 30px;
+            margin-left: 310px;
+        }
+        
+    </style>
+</head>
+<title>Online Complain System</title>
+
+<body>
+    <div class="log">
+        <form>
+
+            <legend>Log In</legend><br>
+            <label>User Name</label>
+            <br>
+
+            <input type="text" name="u_name" placeholder="Enter User Name" size="30" style="height: 2pc;" required>
+            <br>
+
+            <label>Password</label>
+            <br>
+
+            <input type="password" name="password" placeholder="Enter Password" size="30" style="height: 2pc;" required>
+
+            <br>
+
+            <div class="fg">
+                <label>Forgot <a href="">Password?</a></label>
+            </div>
+            <br>
+
+            <div class="log_but">
+                <input type="button" name="button" value="Submit" required>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

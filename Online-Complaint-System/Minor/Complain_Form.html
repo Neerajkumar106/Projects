@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Facluty_style.css">
+    <style>
+        .F_page h1 {
+            font-size: 70px;
+        }
+
+        .F_page .choice legend {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+
+        .F_page .choice fieldset {
+            border-radius: 15px;
+            border-style: double;
+        }
+
+        .F_page .choice td {
+            width: 100px;
+        }
+
+        .F_page .choice input,
+        label {
+            font-size: 20px;
+        }
+
+        .F_page .choice button {
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 180px;
+        }
+    </style>
+</head>
+<title>Form</title>
+
+<body>
+    <div class="F_page">
+        <h1>Sagar Institute Of Science And Technology</h1>
+        <div class="choice">
+            <fieldset>
+                <legend>Choice</legend>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <label>Name</label>
+                            </td>
+                            <td>
+                                <input type="text" name="fname" placeholder="Your Name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Branch</label>
+                            </td>
+                            <td>
+                                <input type="text" name="branch" placeholder="Your Branch">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>ID</label>
+                            </td>
+                            <td>
+                                <input type="text" name="id" placeholder="Your ID">
+                            </td>
+                        </tr>
+                    </table>
+                    <button>Submit</button>
+                </form>
+            </fieldset>
+
+        </div>
+    </div>
+<br><br><br><br>
+    <div class="F_page">
+        <div class="choice">
+            <fieldset>
+                <legend>Compulsary</legend>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <label>Name</label>
+                            </td>
+                            <td>
+                                <input type="text" name="fname" placeholder="Guilty Name" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Branch</label>
+                            </td>
+                            <td>
+                                <input type="text" name="branch" placeholder="Guilty Branch" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>ID</label>
+                            </td>
+                            <td>
+                                <input type="text" name="id" placeholder="Guilty ID" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Problem</label>
+                            </td>
+                            <td>
+                                <input type="text" name="problem" placeholder="Problem You Are Facing" required
+                                    style="height: 50px;">
+                            </td>
+                        </tr>
+                    </table>
+                    <button>Submit</button>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</body>
+
+</html>
