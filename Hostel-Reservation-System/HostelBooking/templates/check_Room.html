@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Check Room Availability</title>
+    <style>
+        .availability-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .availability-form {
+            width: 80%;
+            margin: 0 auto;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .availability-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .availability-form input[type="text"],
+        .availability-form input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .availability-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="availability-header">
+        <h1>Check Room Availability</h1>
+    </div>
+    <div class="availability-form">
+        <form action="">
+            <label for="room-type">Room Type:</label>
+            <select id="room-type">
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="triple">Triple</option>
+            </select>
+
+            <label for="check-in">Check-In Date:</label>
+            <input type="date" id="check-in" name="check-in">
+
+            <label for="check-out">Check-Out Date:</label>
+            <input type="date" id="check-out" name="check-out">
+
+            <input type="submit" value="Check Availability">
+        </form>
+    </div>
+</body>
+
+</html>

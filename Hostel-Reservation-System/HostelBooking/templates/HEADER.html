@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="\static\css\HEADER.css">
+    <link rel="stylesheet" href="\static\css\BOOKING.css">
+    <link rel="stylesheet" href="\static\css\FLOOR.css">
+    <link rel="stylesheet" href="\static\css\ROOM.css">
+    <link rel="stylesheet" href="\static\css\login.css">
+    <link rel="stylesheet" href="\static\css\APPLY.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--------------------------header------------------------------>
+    <script>
+        function BlurBackground() {
+            var blur = document.getElementById("BLUR");
+            blur.setAttribute('class', 'blur');
+        }
+        function RemoveBlur() {
+            var blur = document.getElementById("BLUR");
+            blur.setAttribute('class', 'root-container');
+        }
+        function opensearch() {
+            var search = document.getElementById("search");
+            search.style.display = 'block';
+        }
+        function closesearch() {
+            var search = document.getElementById("search");
+            search.style.display = 'none';
+        }
+    </script>
+    </head>
+
+
+    <body>
+
+        <header class="HEADER">
+
+            <div class="BRAND">
+                <h1><a href="" class="brand-text">Hostel Booking</a></h1>
+            </div>
+
+            <div class="MENU">
+                <ul>
+                    <li id="LI" onmouseover="RemoveBlur()">
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li id="LI" onmouseover="BlurBackground()">
+                        <a href="{% url 'popup' %}">Dashboard</a>
+
+                    </li>
+                    <li id="LI" onmouseover="RemoveBlur()">
+                        <a href="{% url 'booking' %}">Book Hostel</a>
+                    </li>
+                    <li id="LI">
+                        <a href="">About us</a>
+                    </li>
+                    <li id="LI">
+                        <a href="">Hostel Services</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li id="LI">
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    
+                    {% else %}
+                    <li id="LI">
+                        <a href="{% url 'login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                    
+                </ul>
+            </div>
+
+            <div class="icon_con">
+
+                <div class="icon">
+                    <a href="">
+                        <img src="\static\img\hostel-icon.png" alt="" class="icon-img">
+                    </a>
+                </div>
+                {% if user.is_authenticated %}
+                <div >
+                    <p style="color: white; margin-left: 10px;">Welcome {{ user.first_name }}</p>
+                </div>
+                {% endif %}
+            </div>
+        </header>

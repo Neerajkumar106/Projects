@@ -1,0 +1,100 @@
+.form-big-con{
+    height: 670px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-con{
+    width: 400px;
+    border: 0.001px solid gray;
+    background-color: #ffffff;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 0px gray;
+    align-items: center;
+    justify-content: center;
+    
+}
+.form-con h1{
+    color: rgb(5, 5, 5);
+    text-align: center;
+    padding-bottom: 10px;
+}
+.form-con p{
+    color: rgb(6, 6, 6);
+    text-align: center;
+    font-size: 17px;
+}
+.form-con p a{
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+}
+.form-con p a:hover{
+    color: rgb(0, 0, 0);
+}
+.input{
+    color: rgb(3, 3, 3);
+    font-size: 17px;
+    padding: 10px;
+}
+.input input{
+    width: 100%;
+    height: 30px;
+    font-size: 17px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid gray;
+    background-color: #f8f6f6;
+    border-top: none;
+    border-right: none;
+   
+    color: #000000;
+    
+}
+span{
+     display: block;
+     padding-bottom: 5px;
+     margin-left: 1px;
+}
+.btn{
+    padding: 5px;
+    font-size: 17px;
+    color: rgb(252, 254, 253);
+    text-align: center;
+    font-weight: 800;
+}
+.btn button{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(6, 6, 6);
+    color: #ffffff;
+    border: 0.1px solid gray;
+    font-weight: bold;
+    font-size: 15px;
+}
+.p{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.logo{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.logo a{
+    width: 60px;
+    height: 60px;
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 50%;
+    justify-content: center;
+    margin: 10px;
+}
+.logo .fa{
+    cursor: pointer;
+    margin-top: 35%;
+}
+.logo a:hover{
+    color: rgb(245, 247, 246);
+    background-color: rgb(35, 138, 241);
+}

@@ -1,0 +1,27 @@
+{% include 'HEADER.html' %}
+<div class="room-container">
+    <h1>Rooms</h1>
+    <div class="room-con">
+        {% for i in room %}
+
+        {% if i.room_status %}
+        <div class="available">
+            <p>{{i.room_no}}</p>
+            <form action="{% url 'apply'%}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="room_id" value="{{i.room_id}}">
+                <button type="submit">Apply</button>
+            </form>
+            
+        </div>
+        {% else %}
+        <div class="unable">
+            <p>{{i.room_no}}</p>
+        </div>
+        {% endif %}
+
+        {% endfor %}
+
+    </div>
+</div>
+{% include 'FOOTER.html' %}

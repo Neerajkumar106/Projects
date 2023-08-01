@@ -1,0 +1,63 @@
+{% include 'HEADER.html' %}
+
+{% include 'Message.html' %}
+<!-------------------------------body----------------------------------->
+<div class="container1">
+    <div class="home-min-con">
+        <h1>Check Room</h1>
+        <p>There are some hostels that don't have 24hr reception,
+            so this is something you really need to find out
+            before you plan your trip.</p>
+        <a href="{% url 'booking' %}">Check Room</a>
+    </div>
+
+</div>
+
+<!-------------------------------------testimonial-------------------------------->
+
+<div class="testimonial-container">
+    <div class="box_2">
+        <div class="icon_2"><img src="\static\img\1.png" alt=""></div>
+        <div class="content_2">
+            <h3>Book Hostel</h3>
+            <p>
+                A hostel is a lower-priced inn of sorts that offers basic, shared accommodations. Typically,
+                a hostel features a large room with separate beds, a shared bathroom, and a communal kitchen.
+                Some hostels have private rooms, but the lower-cost ones generally offer bunk beds.
+            </p>
+            <a href="#" class="at">Book Hostel</a>
+
+        </div>
+    </div>
+    <div class="box_2">
+        <div class="icon_2"><img src="\static\img\1.png" alt=""></div>
+        <div class="content_2">
+            <h3>Check Room</h3>
+            <p>
+                There are some hostels that don't have 24hr reception, so this is something you really need to find out
+                before you plan your trip.
+                They'll often make you estimate your arrival time so they can organise someone to check you in.
+                With all this, preparation is key!
+            </p>
+            <a href="#" class="at"> Check Room</a>
+
+        </div>
+    </div>
+    <div class="box_2">
+        <div class="icon_2"><img src="\static\img\1.png" alt=""></div>
+        <div class="content_2">
+            <h3>Help desk</h3>
+            <p>
+                Help desk agents should have excellent communication skills. They should be able to empathize with the
+                customer,
+                listen and understand their concern,
+                ask the right questions to get to the root cause of the problem, and provide the proper response on all
+                occasions.
+            </p>
+            <a href="#" class="at">Help</a>
+
+        </div>
+    </div>
+</div>
+
+{% include 'FOOTER.html' %}

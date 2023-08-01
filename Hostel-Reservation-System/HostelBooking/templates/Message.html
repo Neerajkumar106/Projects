@@ -1,0 +1,8 @@
+{% for message in messages %}
+<div role="alert" style="display: flex; margin-top: 20px; color: black; font-size: 25px; justify-content: center;">
+    <strong>{{ message }}</strong>
+    <a href="" class="close" data-dismiss="alert" style="text-decoration: none; width: 30px; text-align: center; margin-left: 20px; background-color: black; color: white; border-radius: 2px;" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </a>  
+</div>
+{% endfor %}

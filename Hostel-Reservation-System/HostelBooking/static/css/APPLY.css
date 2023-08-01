@@ -1,0 +1,9 @@
+.apply-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 700px;
+    font-size: 30px;
+    color: black;
+}

@@ -1,0 +1,29 @@
+{% include 'HEADER.html' %}
+
+{% include 'Message.html' %}
+<div class="form-big-con">
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <div class="form-con">
+            <h1>Log in</h1>
+            <p>Need an Account?<a href="{% url 'register'%}">Sign Up</a></p>
+            <div class="input">
+                <span>Email</span>
+                <input type="email" name="email">
+            </div>
+            <div class="input">
+                <span>Password</span>
+                <input type="password" name="password" minlength="4" maxlength="8">
+            </div>
+            <div class="btn">
+                <button type="submit">Login</button>
+            </div>
+            <span class="p">------------ or sign up with -----------</span>
+            <div class="logo">
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google"></i></a>
+            </div>
+        </div>
+    </form>
+</div>
+{% include 'FOOTER.html' %}

@@ -1,0 +1,19 @@
+{% include 'HEADER.html'%}
+
+<div class="floor-container">
+    <h1>Floors</h1>
+
+    <div class="floor-con">
+        {% for i in floor %}
+        <div class="floor-min-con">
+            <a href="{% url 'room' i.floor_id %}">
+                <h2>Floor No {{i.floor_no}}</h2>
+            </a>
+            <p>Available Room {{numberof_room}}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% include 'FOOTER.html'%}

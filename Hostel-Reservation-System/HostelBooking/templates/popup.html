@@ -1,0 +1,814 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .overlay{
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        position: fixed;
+        top: 0%;
+        z-index: -1;
+        opacity: 0;
+        /*transition: 1s;*/
+    }
+    .showoverlay{
+        opacity: 1;
+        z-index: 1;
+    }
+    .loginform{
+        width: 350px;
+        background-color: white;
+        padding: 30px 20px;
+        position: absolute;
+        left: 70%;
+        top: -50%;
+        box-shadow: 0px 0px 10px 3px #ccc;
+        transform: translate(-50%,-50%);
+        /*transition: 2s;*/
+        z-index: 9;
+    }
+    .showloginform{
+        top: 50%;
+        
+    }
+    .loginform input{
+        width: 100%;
+        height: 35px;
+        margin-bottom: 25px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+    }
+    .loginform textarea{
+        width: 100%;
+        height: 35px;
+        margin-bottom: 25px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        resize: none;
+    }
+    .loginform button{
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+    }
+    .btn{
+        display: flex;
+        text-align: center;
+        line-height: 35px;
+    }
+    .btn p{
+        margin-left: 10px;
+    }
+    .loginform span{
+        position: absolute;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        top: 0%;
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+
+    .btn-login1{
+        padding: 10px 15px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+
+    }
+    .overlay1{
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        position: fixed;
+        top: 0%;
+        z-index: -1;
+        opacity: 0;
+        /*transition: 1s;*/
+    }
+    .showoverlay1{
+        opacity: 1;
+        z-index: 1;
+    }
+    .loginform1{
+        width: 350px;
+        background-color: white;
+        padding: 30px 20px;
+        position: absolute;
+        left: 70%;
+        top: -50%;
+        box-shadow: 0px 0px 10px 3px #ccc;
+        transform: translate(-50%,-50%);
+        /*transition: 2s;*/
+        z-index: 9;
+    }
+    .showloginform1{
+        top: 50%;
+        
+    }
+    .loginform1 input{
+        width: 100%;
+        height: 35px;
+        margin-bottom: 25px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+    }
+    .loginform1 button{
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+    }
+    .loginform1 span{
+        position: absolute;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        top: 0%;
+        line-height: 30px;
+        cursor: pointer;
+        
+    }
+    .loginform1 h1{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .loginform h1{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .con{
+        width: 250px;
+        height: 600px;
+        box-shadow: 0px 0px 10px 3px #ccc;
+        position: absolute;
+        left: 10px;
+        top: 10%;
+        
+    }
+    .btn-small-con{
+        display: block;
+        margin: 10px 50px;
+        align-items: center;
+    }
+    .btn-login{
+        padding: 10px 30px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+
+    }
+    .btn-login1{
+        padding: 10px 30px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+    }
+    .con h1{
+        text-align: center;
+        margin: 10px;
+    }
+
+
+    .overlay2{
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        position: fixed;
+        top: 0%;
+        z-index: -1;
+        opacity: 0;
+        /*transition: 1s;*/
+    }
+    .showoverlay2{
+        opacity: 1;
+        z-index: 1;
+    }
+    .loginform2{
+        width: 450px;
+        background-color: white;
+        padding: 30px 20px;
+        position: absolute;
+        left: 70%;
+        top: -50%;
+        box-shadow: 0px 0px 10px 3px #ccc;
+        transform: translate(-50%,-50%);
+        /*transition: 2s;*/
+        z-index: 9;
+    }
+    .showloginform2{
+        top: 50%;
+        
+    }
+    .loginform2 input{
+        width: 100%;
+        height: 35px;
+        margin-bottom: 25px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+    }
+    .loginform2 button{
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+    }
+    .btn{
+        display: flex;
+        text-align: center;
+        line-height: 35px;
+    }
+    .btn p{
+        margin-left: 10px;
+    }
+    .loginform2 span{
+        position: absolute;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        top: 0%;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .btn-login2{
+        padding: 10px 30px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+    }
+    .loginform2 h1{
+        margin: 10px;
+        text-align: center;
+    }
+    .loginform2 h2{
+        margin: 20px;
+    }
+    .loginform2 a{
+        display: inline;
+        text-align: center;
+        width: 40px;
+        height: 30px;
+        color: white;
+        text-decoration: none;
+        background-color: black;
+        padding: 15px 30px;
+       margin-left: 30%;
+       border-radius: 5px;
+       margin-top: 40px;
+       margin-bottom: 20px;
+    }
+    .loginform2 p{
+        margin: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+        
+    }
+    .contact h3{
+        text-align: center;
+    }
+    .contact{
+        width: 80%; 
+        margin: 50px;
+        background-color: #dedede;
+    }
+    .contact p{
+        text-align: center;
+    }
+
+
+
+
+    .overlay3{
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        position: fixed;
+        top: 0%;
+        z-index: -1;
+        opacity: 0;
+        /*transition: 1s;*/
+    }
+    .showoverlay3{
+        opacity: 1;
+        z-index: 1;
+    }
+    .loginform3{
+        width: 450px;
+        background-color: white;
+        padding: 30px 20px;
+        position: absolute;
+        left: 70%;
+        top: -50%;
+        box-shadow: 0px 0px 10px 3px #ccc;
+        transform: translate(-50%,-50%);
+        /*transition: 2s;*/
+        z-index: 9;
+    }
+    .showloginform3{
+        top: 50%;
+        
+    }
+    .loginform3 input{
+        width: 100%;
+        height: 35px;
+        margin-bottom: 25px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+    }
+    .loginform3 button{
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+    }
+    .btn{
+        display: flex;
+        text-align: center;
+        line-height: 35px;
+    }
+    .loginform3 span{
+        position: absolute;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        top: 0%;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .btn-login3{
+        padding: 10px 30px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+    }
+    .loginform3 h1{
+        margin: 10px;
+        text-align: center;
+    }
+    .loginform3 h2{
+        margin: 20px;
+    }
+    .loginform3 a{
+        display: inline;
+        text-align: center;
+        width: 40px;
+        height: 30px;
+        color: white;
+        text-decoration: none;
+        background-color: black;
+        padding: 15px 30px;
+       margin-left: 30%;
+       border-radius: 5px;
+       margin-top: 40px;
+       margin-bottom: 20px;
+    }
+    .fee{
+        justify-content: space-between;
+        display: flex;
+    }
+    .fee .pf{
+        color: rgb(25, 176, 11);
+        padding: 10px;
+    }
+    .fee .bf{
+        color: rgb(255, 128, 1);
+        padding: 10px;
+    }
+    .fee .tf{
+        color: rgb(0, 0, 0);
+        padding: 10px;
+    }
+    .p{
+        width: 110px;
+        height: 50px;
+        display: block;
+        border-right: 1px solid black;
+        justify-content: center;
+    }
+
+
+
+
+    .overlay4{
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        position: fixed;
+        top: 0%;
+        z-index: -1;
+        opacity: 0;
+        /*transition: 1s;*/
+    }
+    .showoverlay4{
+        opacity: 1;
+        z-index: 1;
+    }
+    .loginform4{
+        width: 450px;
+        background-color: white;
+        padding: 30px 20px;
+        position: absolute;
+        left: 70%;
+        top: -50%;
+        box-shadow: 0px 0px 10px 3px #ccc;
+        transform: translate(-50%,-50%);
+        /*transition: 2s;*/
+        z-index: 9;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .showloginform4{
+        top: 50%;
+        
+    }
+    .loginform4 button{
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+    }
+    .loginform4 span{
+        position: absolute;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        top: 0%;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .btn-login4{
+        padding: 10px 30px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+    }
+    .loginform4 h1{
+        margin: 10px;
+        text-align: center;
+    }
+    .container{
+       /* background: #111;*/
+        padding: 20px 30px;
+        border: 1px solid #444;
+        display: flex;
+        border-radius: 5px;
+        justify-content: center;
+    }
+   .container .widget input{
+    display: none;
+   }
+  .widget label{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+   }
+    input:not(:checked) ~ label:hover,
+    input:not(:checked) ~ label:hover ~ label{
+        color: #fd4;
+    }
+    input:checked ~ label{
+    color: #fd4;
+   }
+   input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+   }
+   input#rate-1:checked ~ form header:before{
+    content: "I don't like it 😠";
+   }
+   input#rate-2:checked ~ form header:before{
+    content: "I like it 😕";
+   }
+   input#rate-3:checked ~ form header:before{
+    content: "It is awesome 😀";
+   }
+   input#rate-4:checked ~ form header:before{
+    content: "I just like it 😎";
+   }
+   input#rate-5:checked ~ form header:before{
+    content: "I just love it 😍";
+   }
+
+form header{
+    width: 100%;
+    font-size: 25px;
+    color: rgb(9, 9, 9);
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2 ease;
+}
+
+.text textarea{
+        width: 100%;
+        height: 35px;
+        margin-bottom: 25px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        font-size: 17px;
+        color: #000;
+        resize: none;
+    }
+    form .btn{
+        height: 35px;
+        width: 100%;
+        margin: 15px 0;
+    }
+    form .btn button{
+        height: 100%;
+        width: 100%;
+        border: 1px solid #444;
+        outline: none;
+        background: #222;
+        color: #999;
+        font-size: 17px;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    form .btn button:hover{
+        background: #1b1b1b;
+    }
+</style>
+<body>
+<div class="con">
+    <h1>DASHBOARD</h1>
+    <div class="btn-small-con">
+        <button class="btn-login" onclick="showModel()">Complaint Form</button>
+    </div>
+    <div class="btn-small-con">
+        <button class="btn-login1" >Change Password</button>
+    </div>
+    <div class="btn-small-con">
+        <button class="btn-login2" >Contact US</button>
+    </div>
+    <div class="btn-small-con">
+        <button class="btn-login3" >Outstanding Fees</button>
+    </div>
+    <div class="btn-small-con">
+        <button class="btn-login4" >Feedback</button>
+    </div>
+    <div class="btn-small-con">
+        <button class="btn-login" >Logout</button>
+    </div>
+</div>
+    <!-----------Login Page------------->
+    <div class="overlay" onclick="closeModel()"></div>
+        <div class="loginform">
+            <span>&times;</span>
+            <form action="">
+                <h1>Student Complaint Form</h1>
+                <div>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div>
+                    <input type="email" placeholder="Email">
+                </div>
+                <div>
+                    <input type="text" placeholder="Room Number">
+                </div>
+                <div>
+                    <textarea name="" cols="20" rows="20" placeholder="Complaint"></textarea>
+                </div>
+                
+                <div class="btn">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+        <!------------Sign Up Page------------>
+        <div class="overlay1" onclick="closeModel1()"></div>
+        <div class="loginform1">
+            <span onclick="closeModel1()">&times;</span>
+            <form action="">
+                <h1>Change Password</h1>
+                <div>
+                    <input type="password" placeholder="New Password">
+                </div>
+                <div>
+                    <input type="password" placeholder="New Password">
+                </div>
+                <div>
+                    <input type="password" placeholder="Confirm Password">
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+
+
+            <!---------------contact as----------------------->
+        <div class="overlay2" onclick="closeModel2()"></div>
+        <div class="loginform2">
+            <span onclick="closeModel2()">&times;</span>
+            <h1>Contact Us</h1>
+
+            <h2>Contact Us</h2>
+            <a href=""><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Address</a>
+            <p>Sagar Institute of Science & Technology (SISTec).<br>
+            Opposite International Airport, Gandhi Nagar, Bhopal<br>
+        462036 (M.P.)</p>
+        <a href=""><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Contact Number</a>
+        <div class="contact">
+            <h3>Gajendra Gayakwad</h3>
+            <p>Asst. Professor.C.S.E<br>
+            (Project Guide)<br>
+        Mobile:(+91)9770844060<br>
+    Email:gejendragayakwad@sistec.ac.in</p>
+        </div>
+        <div class="contact">
+            <h3>Neeraj Kumar</h3>
+            (User Interface)<br>
+        Mobile:(+91)9770844060<br>
+    Email:Neerajkumar@sistec.ac.in</p>
+        </div>
+        </div>
+        <!-------------------------------fees --------------------------->
+        <div class="overlay3" onclick="closeModel3()"></div>
+        <div class="loginform3">
+            <span onclick="closeModel3()">&times;</span>
+            <h1>Outstanding Fees</h1>
+            <div class="fee">
+                <div class="p">
+                    <div class="pf">$0</div>
+                    <p>Paid Fees</p>
+                </div>
+                <div class="p">
+                    <div class="bf">$0</div>
+                    <p>Balance Fees</p>
+                </div>
+                <div class="p">
+                    <div class="tf">$0</div>
+                    <p>Total Fees</p>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------feed back--------------------------------->
+        <div class="overlay4" onclick="closeModel4()"></div>
+        <div class="loginform4">
+            <span onclick="closeModel4()">&times;</span>
+            <div class="container">
+                <div class="widget">
+                    <input type="radio" name="rate" id="rate-5">
+                    <label for="rate-5" class="fas fa-star"></label>
+                
+                    <input type="radio" name="rate" id="rate-4">
+                    <label for="rate-4" class="fas fa-star"></label>
+                
+                    <input type="radio" name="rate" id="rate-3">
+                    <label for="rate-3" class="fas fa-star"></label>
+                
+                    <input type="radio" name="rate" id="rate-2">
+                    <label for="rate-2" class="fas fa-star"></label>
+                
+                    <input type="radio" name="rate" id="rate-1">
+                    <label for="rate-1" class="fas fa-star"></label>
+                    <form action="" method="post">
+                        <header></header>
+                        <div class="text">
+                            <textarea name="" id="" cols="30" placeholder="Discribe your experience.."></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            
+        </div>
+</body>
+<script>
+    function showModel(){
+        document.querySelector('.overlay').classList.add('showoverlay');
+        document.querySelector('.loginform').classList.add('showloginform');
+    }
+    function closeModel(){
+        document.querySelector('.overlay').classList.remove('showoverlay');
+        document.querySelector('.loginform').classList.remove('showloginform');
+    }
+        //var btnlogin = document.querySelector(".btn-login");//Button
+        //btnlogin.addEventListener("click",showModel); //Button Click
+
+        var c = document.querySelector("span");
+        c.addEventListener("click",closeModel);
+
+        //sign up page
+
+    function showModel1(){
+        document.querySelector('.overlay1').classList.add('showoverlay1');
+        document.querySelector('.loginform1').classList.add('showloginform1');
+    }
+    function closeModel1(){
+        document.querySelector('.overlay1').classList.remove('showoverlay1');
+        document.querySelector('.loginform1').classList.remove('showloginform1');
+    }
+        var btnlogin = document.querySelector(".btn-login1");//Button
+        btnlogin.addEventListener("click",showModel1); //Button Click
+
+        var c = document.querySelector("span");
+        c.addEventListener("click",closeModel1);
+
+
+
+        function showModel2(){
+        document.querySelector('.overlay2').classList.add('showoverlay2');
+        document.querySelector('.loginform2').classList.add('showloginform2');
+    }
+    function closeModel2(){
+        document.querySelector('.overlay2').classList.remove('showoverlay2');
+        document.querySelector('.loginform2').classList.remove('showloginform2');
+    }
+        var btnlogin = document.querySelector(".btn-login2");//Button
+        btnlogin.addEventListener("click",showModel2); //Button Click
+
+        var c = document.querySelector("span");
+        c.addEventListener("click",closeModel2);
+
+
+        function showModel3(){
+        document.querySelector('.overlay3').classList.add('showoverlay3');
+        document.querySelector('.loginform3').classList.add('showloginform3');
+    }
+    function closeModel3(){
+        document.querySelector('.overlay3').classList.remove('showoverlay3');
+        document.querySelector('.loginform3').classList.remove('showloginform3');
+    }
+        var btnlogin = document.querySelector(".btn-login3");//Button
+        btnlogin.addEventListener("click",showModel3); //Button Click
+
+        var c = document.querySelector("span");
+        c.addEventListener("click",closeModel3);
+
+
+
+        function showModel4(){
+        document.querySelector('.overlay4').classList.add('showoverlay4');
+        document.querySelector('.loginform4').classList.add('showloginform4');
+    }
+    function closeModel4(){
+        document.querySelector('.overlay4').classList.remove('showoverlay4');
+        document.querySelector('.loginform4').classList.remove('showloginform4');
+    }
+        var btnlogin = document.querySelector(".btn-login4");//Button
+        btnlogin.addEventListener("click",showModel4); //Button Click
+
+        var c = document.querySelector("span");
+        c.addEventListener("click",closeModel4);
+</script>
+</html>

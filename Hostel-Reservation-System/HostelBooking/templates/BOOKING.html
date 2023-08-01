@@ -1,0 +1,26 @@
+{% include 'HEADER.html' %}
+
+    <div class="container">
+        <h1>Book Hostel</h1>
+        <div class="min-con">
+           
+            <div>
+                <img src="\static\img\boys-hostel.jpg" alt="">
+                <h2>Boys Hostel</h2>
+                <p class="p" style="color: rgb(3, 169, 8);">Available Room: {{numberof_room}}</p>
+                <p>Room Price: $200 /year</p>
+
+                <a href="{% url 'floor' %}">Book</a>
+            </div>
+
+            <div>
+                <img src="\static\img\girls-hostel.jpg" alt="">
+                <h2>Girls Hostel</h2>
+                <p class="p" style="color: rgb(3, 169, 8);">Available Room: {{numberof_room}}</p>
+                <p>Room Price: $200 /year</p>
+                <a href="{% url 'floor' %}">Book</a>
+            </div>
+        </div>
+    </div>
+
+{% include 'FOOTER.html' %}

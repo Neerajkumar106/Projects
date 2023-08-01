@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View Room Form for Hostel Reservation System</title>
+        <style>
+            /* Add some styles to make the form look nice */
+            label {
+                display: block;
+                margin-top: 20px;
+            }
+            input[type="text"], textarea, select {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                font-size: 16px;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+            }
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+                font-size: 16px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #3e8e41;
+            }
+            /* Add some styles to display the room information */
+            .room-info {
+                margin-top: 20px;
+                padding: 20px;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#">
+            <label for="room_number">Room Number:</label>
+            <input type="text" id="room_number" name="room_number" required>
+
+            <input type="submit" value="View Room">
+        </form>
+
+        <!-- Display the room information -->
+        <div class="room-info">
+            <p><strong>Room Number:</strong> <span id="display_room_number"></span></p>
+            <p><strong>Capacity:</strong> <span id="display_capacity"></span></p>
+            <p><strong>Price:</strong> <span id="display_price"></span></p>
+            <p><strong>Availability:</strong> <span id="display_availability"></span></p>
+        </div>
+
+        <!-- Add some JavaScript to populate the room information -->
+        <script>
+            document.querySelector("form").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                var roomNumber = document.querySelector("#room_number").value;
+
+                // Replace this with code to retrieve the room information from the database
+                var roomInfo = {
+                    roomNumber: roomNumber,
+                    capacity: 4,
+                    price: "$50/night",
+                    availability: "Available"
+                };
+
+                document.querySelector("#display_room_number").textContent = roomInfo.roomNumber;
+                document.querySelector("#display_capacity").textContent = roomInfo.capacity;
+                document.querySelector("#display_price").textContent = roomInfo.price;
+                document.querySelector("#display_availability").textContent = roomInfo.availability;
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+
+.room-container{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 160px;
+}
+.room-con{
+    display: flex;
+    margin: 50px;
+    flex-wrap: wrap;
+}
+
+.apply-btn{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    color:  rgb(30, 172, 8);
+    box-shadow: 0px 1px 5px 0px rgb(171, 171, 171);
+    border-radius: 5px;
+}
+
+.available{
+    background-color: rgb(30, 172, 8);
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hover-available{
+    background-color: rgb(30, 172, 8);
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.available p{
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
+}
+.available:hover{
+    box-shadow: 0px 1px 5px 0px rgb(171, 171, 171);
+}
+.available:hover .hover-available
+{
+    display: none;
+}
+.unable p{
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
+    padding: 30px;
+}
+.unable{
+    background-color: rgb(198, 1, 1);
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.unable:hover{
+    box-shadow: 0px 1px 5px 0px rgb(171, 171, 171);
+}
